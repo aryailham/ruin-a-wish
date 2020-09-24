@@ -1,0 +1,7 @@
+.NavigationBar {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  width: 100%;
+}
