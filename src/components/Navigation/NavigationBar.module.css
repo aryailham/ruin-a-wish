@@ -1,7 +1,10 @@
 .NavigationBar {
-  background-color: red;
-  display: flex;
-  flex-direction: column;
-  height: 30px;
+  height: 56px;
   width: 100%;
+  background-color: #703b09;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 90;
 }
