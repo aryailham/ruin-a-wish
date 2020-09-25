@@ -1,13 +1,17 @@
 import React from "react";
-import Aux from "../../../hoc/Auxiliary";
-import Items from "./NavigationItem/NavigationItem";
+import NavigationItem from "./NavigationItem/NavigationItem";
+import classes from "./NavigationItems.module.css";
 
 const navigationItems = () => {
   return (
-    <Aux>
-      <navigationItems link="/">All Post</navigationItems>
-      <navigationItems link="/new-post">New Post</navigationItems>
-    </Aux>
+    <ul className={classes.NavigationItems}>
+      <NavigationItem link="/">
+        <strong>All Post</strong>
+      </NavigationItem>
+      <NavigationItem link="/new-post">
+        <strong>New Post</strong>
+      </NavigationItem>
+    </ul>
   );
 };
 
