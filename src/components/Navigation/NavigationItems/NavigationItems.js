@@ -5,8 +5,12 @@ import classes from "./NavigationItems.module.css";
 const navigationItems = () => {
   return (
     <ul className={classes.NavigationItems}>
-      <NavigationItem link="/">All Post</NavigationItem>
-      <NavigationItem link="/new-post">New Post</NavigationItem>
+      <NavigationItem link="/">
+        <strong>All Post</strong>
+      </NavigationItem>
+      <NavigationItem link="/new-post">
+        <strong>New Post</strong>
+      </NavigationItem>
     </ul>
   );
 };
