@@ -11,12 +11,8 @@ const postHolder = (props) => {
       </div>
       <h2>{props.data.post}</h2>
       <div className={classes.PostAction}>
-        <div>
-          <p>Upvote</p>
-        </div>
-        <div>
-          <p>Comment</p>
-        </div>
+        <button>Upvote</button>
+        <button>Comment</button>
       </div>
     </div>
   );
