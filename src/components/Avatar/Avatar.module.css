@@ -1,0 +1,13 @@
+.Avatar {
+  background-color: white;
+  padding: 10px;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.Avatar img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}

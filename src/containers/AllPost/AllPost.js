@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PostHolder from "../../components/PostHolder/PostHolder";
 import axios from "../../axios-connect";
+import classes from "../AllPost/AllPost.module.css";
 
 const AllPost = () => {
   const [posts, setPosts] = useState([]);
@@ -11,11 +12,17 @@ const AllPost = () => {
     axios
       .get("posts.json")
       .then((result) => {
-        let fetchedData = posts;
+        let fetchedData = [];
         for (let key in result.data) {
           fetchedData.push({ ...result.data[key], id: key });
         }
-        setPosts((posts) => fetchedData);
+        // setPosts((prevPosts) => {
+        //   return {
+        //     ...prevPosts,
+        //     fetchedData,
+        //   };
+        // });
+        setPosts((posts) => posts.concat(fetchedData));
       })
       .catch((err) => {
         console.log(err);
@@ -23,22 +30,10 @@ const AllPost = () => {
   }, []);
 
   const allPost = posts.map((post) => {
-    return (
-      <div>
-        id: {post.id} <br />
-        text: {post.post}
-      </div>
-    );
+    return <PostHolder data={post} key={post.id} />;
   });
 
-  console.log(posts);
-
-  return (
-    <div>
-      <h1>test</h1>
-      {allPost}
-    </div>
-  );
+  return <div className={classes.AllPost}>{allPost.reverse()}</div>;
 };
 
 export default AllPost;
