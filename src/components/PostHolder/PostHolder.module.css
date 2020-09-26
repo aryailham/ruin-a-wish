@@ -26,6 +26,10 @@
   grid-area: post;
   font-size: 22px;
   text-align: center;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .PostAction {

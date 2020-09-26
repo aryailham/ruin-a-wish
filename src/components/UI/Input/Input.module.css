@@ -2,7 +2,7 @@
   border: 1px solid #ccc;
   box-shadow: 1px 2px 3px solid #ccc;
   height: 20px;
-  width: 50%;
+  width: 80%;
   border-radius: 10px;
   padding: 10px 10px;
 }
@@ -14,4 +14,10 @@
   border-radius: 10px;
 
   margin: 21.44px;
+}
+
+@media (min-width: 900px) {
+  .InputField {
+    width: 50%;
+  }
 }
