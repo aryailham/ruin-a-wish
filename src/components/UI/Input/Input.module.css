@@ -1,0 +1,17 @@
+.InputField {
+  border: 1px solid #ccc;
+  box-shadow: 1px 2px 3px solid #ccc;
+  height: 20px;
+  width: 50%;
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+
+.Button {
+  background-color: #84a9ac;
+  padding: 10px 100px;
+  border: none;
+  border-radius: 10px;
+
+  margin: 21.44px;
+}
