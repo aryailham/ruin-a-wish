@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import PostHolder from "../../components/PostHolder/PostHolder";
 import axios from "../../axios-connect";
 import classes from "./AllPost.module.css";
+import { useHistory } from "react-router-dom";
 
-const AllPost = () => {
+const AllPost = (props) => {
   const [posts, setPosts] = useState([]);
+  const history = useHistory();
 
   useEffect(() => {
     console.log("useEffect fired!");
@@ -31,7 +33,7 @@ const AllPost = () => {
 
   const onCommentClickHandler = (key) => {
     console.log(key)
-
+    history.push('/post/'+key);
   }
   const allPost = posts.map((post) => {
     return <PostHolder data={post} key={post.id} clicked={() => onCommentClickHandler(post.id)} />;
