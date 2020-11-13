@@ -10,6 +10,7 @@ const App = () => {
       <Switch>
         <Route path="/" render={() => <AllPost />} exact />
         <Route path="/new-post" component={NewPost} exact />
+        <Route path="/post:id" element={<Component />} />
       </Switch>
     </Layout>
   );

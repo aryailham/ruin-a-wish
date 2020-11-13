@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PostHolder from "../../components/PostHolder/PostHolder";
 import axios from "../../axios-connect";
-import classes from "../AllPost/AllPost.module.css";
+import classes from "./AllPost.module.css";
 
 const AllPost = () => {
   const [posts, setPosts] = useState([]);
@@ -29,9 +29,14 @@ const AllPost = () => {
       });
   }, []);
 
+  const onCommentClickHandler = (key) => {
+    console.log(key)
+
+  }
   const allPost = posts.map((post) => {
-    return <PostHolder data={post} key={post.id} />;
+    return <PostHolder data={post} key={post.id} clicked={() => onCommentClickHandler(post.id)} />;
   });
+
 
   return <div className={classes.AllPost}>{allPost.reverse()}</div>;
 };
