@@ -8,10 +8,6 @@ const postHolder = (props) => {
   return (
     <div className={classes.PostHolder}>
         <PostData data = {props.data} />
-        <div className={classes.PostAction}>
-          <button>Upvote</button>
-          <button onClick={props.clicked}>Comment</button>
-        </div>
     </div>
   );
 };

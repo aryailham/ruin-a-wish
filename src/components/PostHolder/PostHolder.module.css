@@ -13,14 +13,6 @@
     "post"
     "action";
 }
-
-.Avatar {
-  grid-area: avatar;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .PostHolder h2 {
   grid-area: post;
   font-size: 22px;
@@ -30,7 +22,6 @@
   flex-direction: column;
   justify-content: center;
 }
-
 .PostAction {
   grid-area: action;
   display: flex;

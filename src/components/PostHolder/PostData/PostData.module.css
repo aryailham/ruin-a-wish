@@ -1,4 +1,5 @@
-.Post {
+.Avatar {
+  grid-area: avatar;
   display: flex;
   flex-direction: column;
   align-items: center;

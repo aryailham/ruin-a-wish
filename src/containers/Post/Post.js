@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import axios from "../../axios-connect";
 import classes from "./Post.module.css";
 
+import DetailPostHolder from '../../components/PostHolder/DetailPostHolder';
+
 const Post = (props) => {
 
     const [post, setPost] = useState({});
@@ -10,20 +12,26 @@ const Post = (props) => {
     useEffect(() => {
         const postid = props.match.params.id
 
-        axios.get('posts.json/').then((result) => {
-            // setPost(result);
+        axios.get('posts.json').then((result) => {
+            console.log(result);
             let fetchedData = [];
             for(let key in result.data){
                 fetchedData.push({ ...result.data[key], id: key });
             }
-            console.log(fetchedData.filter((data) => data.id == postid));
-            setPost(...fetchedData);
+            const data = fetchedData.filter((data) =>{
+                return data.id == postid;
+            } );
+            setPost(...data);
         }).catch((err) =>{
             console.log(err);
         })
     },[]);
 
-    return <div>{post.post}</div>
+    return (
+        <div className={classes.Post}>
+            <DetailPostHolder data = {post}/>
+        </div>
+    )
 }
 
 export default Post;
