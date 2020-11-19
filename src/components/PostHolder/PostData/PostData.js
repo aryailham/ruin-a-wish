@@ -11,7 +11,7 @@ const postData = (props) => {
             <div className={classes.Avatar}>
                     <Avatar />
             </div>
-            <h2>{props.data.post}</h2>
+                <h2>{props.data.post}</h2>
         </Auxiliary>
     )
 }

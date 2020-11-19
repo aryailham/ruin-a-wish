@@ -1,0 +1,23 @@
+.NewComment {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.CommentBox {
+  width: 500px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 2px 3px solid #ccc;
+  border-radius: 15px;
+  padding: 10px 10px;
+}
+
+.Button {
+  background-color: #84a9ac;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+}
