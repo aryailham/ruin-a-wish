@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Comment from './Comment/Comment';
+import classes from './AllComment.module.css';
 
 const allComment = props =>{
 
@@ -11,12 +12,12 @@ const allComment = props =>{
     }
     else{
         comments = props.comments.map(comment => {
-            return <div key={comment.id}>{comment.comment}</div>
+            return <Comment data={comment.comment} key={comment.id}/>
         })
     }
 
     return(
-        <div>
+        <div className={classes.AllComment}>
             {comments}
         </div>
     );

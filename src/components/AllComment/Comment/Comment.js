@@ -1,11 +1,12 @@
 import React from  'react';
+import classes from './Comment.module.css';
 
 const comment = props =>{
     return(
-        <div>
-
+        <div className={classes.CommentPlaceholder}>
+            <p>{props.data}</p>
         </div>
     )
 }
 
-export default comment
+export default comment;

@@ -15,7 +15,6 @@ const Post = (props) => {
 
     useEffect(() => {
         const postid = props.match.params.id
-
         axios.get('posts/'+postid+'.json').then((result) => {
             let fetchedData = result;
             setPost(fetchedData.data);

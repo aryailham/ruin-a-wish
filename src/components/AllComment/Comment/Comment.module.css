@@ -1,0 +1,10 @@
+.CommentPlaceholder {
+  width: 100%;
+  padding: 25px;
+  min-height: 200px;
+  box-shadow: 1px 2px 3px #ccc;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
